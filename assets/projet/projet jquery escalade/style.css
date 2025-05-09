@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ul,ol{
+    list-style: none;
+}
+
+body{
+    background: linear-gradient(90deg, #606060, #e0e0e0);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+header{
+    padding: 30px 0;
+}
+
+header h1{
+    font-size: 35px;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px black;
+}
+
+/*Main menu*/
+
+#main-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-menu ul{
+    width: 980px;
+    height: 500px;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+#main-menu ul li{
+    float: left;
+    width: 140px;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease; 
+}
+
+#main-menu ul li:hover {
+    transform: translateY(-10px); 
+}
+
+.bw{
+    width: 140px;
+    height: 500px;
+    cursor: pointer;
+    background: url(./img/20250118_220616.jpg) no-repeat;
+    opacity: 0.7;
+    position: absolute;
+    left: 0px;
+    z-index: 2;
+}
+
+
+
+.color{
+    width: 140px;
+    height: 500px;
+    cursor: pointer;
+    background: url(./img/InShot_20250118_220539326.jpg) no-repeat;
+    position: absolute;
+    left: 140px;
+    z-index: 2;
+}
+
+#part2 div{
+    background-position: -160px 0px;
+}
+
+#part3 div{
+    background-position: -300px 0px;
+}
+
+#part4 div{
+    background-position: -460px 0px;
+}
+
+#part5 div{
+    background-position: -600px 0px;
+}
+
+.description{
+    position: absolute;
+    top: 0px; 
+    left: 140px; 
+    width: 240px;
+    height: 460px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.848);
+}
+
+.description h2{
+    padding-top: 20px;
+    font-size: 30px;
+    text-align: center;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.description h3{
+    margin-top: 30px;
+    padding: 10px;
+    font-size: 26px;
+    background: #4c5844;
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 1px black;
+    border-radius: 5px;
+}
+
+.description p{
+    padding-top: 35px;
+    font-size: 18px;
+    color: black;
+    text-align: center;
+}

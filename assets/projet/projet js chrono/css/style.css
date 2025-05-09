@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* 🌞 Mode Clair (par défaut) */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    color: #333;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.chronometre {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    width: 600px;
+    text-align: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tim {
+    margin: auto;
+    width: 100%;
+    border: 2px solid #2ecc71;
+    border-radius: 6px;
+    padding: 10px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: #2ecc71;
+    background: #f0f0f0;
+}
+
+.tim span {
+    padding: 5px;
+}
+
+.controls {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+button {
+    background-color: #2ecc71;
+    color: #fff;
+    font-size: 18px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    width: 31%;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #27ae60;
+    transform: scale(1.05);
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Mode clair - bouton thème */
+#toggle-theme {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 12%;
+}
+
+#toggle-theme:hover {
+    background-color: #168c4a;
+}
+
+/* 🌙 Mode Sombre */
+.dark-mode {
+    background-color: #121212;
+    color: #fff;
+}
+
+.dark-mode .chronometre {
+    background-color: #1e1e1e;
+    color: #fff;
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .tim {
+    border-color: #27ae60;
+    color: #27ae60;
+    background: #000;
+}
+
+.dark-mode button {
+    background-color: #27ae60;
+}
+
+.dark-mode button:hover {
+    background-color: #219653;
+}
+
+.dark-mode #toggle-theme {
+    background-color: #27ae60;
+}
+
+.dark-mode #toggle-theme:hover {
+    background-color: #219653;
+}

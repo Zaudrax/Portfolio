@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- ===== CSS ===== -->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <!-- ===== BOX ICONS ===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <title>Portfolio responsive complete</title>
+    </head>
+    <body>
+
+        <!--===== HEADER =====-->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="#" class="nav__logo">Baptiste Renaud</a>
+                </div>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                        <li class="nav__item"><a href="#portfolio" class="nav__link">Portfolio</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main">
+            <!--===== HOME =====-->
+            <section class="home" id="home">
+                <div class="home__container bd-grid">
+                    <h1 class="home__title"><span>HE</span><br>LLO.</h1>
+
+                    
+
+                    <div class="home__scroll">
+                        <a href="#about" class="home__scroll-link"><i class='bx bx-up-arrow-alt' ></i>Scroll down</a>
+                    </div>
+
+                    <img src="assets/img/perfil.png" alt="" class="home__img">
+                    <a href="assets/cv-baptiste-renaud.pdf" download class="home__button">Télécharger mon CV</a>
+                </div>
+            </section>
+  </div>          
+            <!--===== ABOUT =====-->
+            <section class="about section" id="about">
+                <h2 class="section-title">A propos de moi</h2>
+
+                <div class="about__container bd-grid">
+                    <div class="about__img">
+                        <img src="assets/img/perfil.png" alt="" id="perfil__img">
+                    </div>
+
+                    <div>
+                        <h2 class="about__subtitle">Je suis Baptiste Renaud</h2>
+                        <span class="about__profession">Développeur web</span>
+                        <p class="about__text">Passionné, créatif et âgé de 22 ans, j’intègre une formation Bac+4 en développement web fullstack. Je suis à la recherche d’une alternance pour rejoindre une équipe dynamique, apprendre en conditions réelles et mettre mes compétences au service de projets concrets.</p>
+
+                        <div class="about__social">
+                            <a href="https://www.linkedin.com/in/baptiste-renaud-115b3a203/" target="_blank"  class="about__social-icon"><i class='bx bxl-linkedin' ></i></a>
+                            <a href="https://github.com/Zaudrax" target="_blank"  class="about__social-icon"><i class='bx bxl-github' ></i></a>
+                            <!-- <a href="#" class="about__social-icon"><i class='bx bxl-dribbble' ></i></a> -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--===== SKILLS =====-->
+            <section class="skills section" id="skills">
+                <h2 class="section-title">Compétences</h2>
+
+                <div class="skills__container bd-grid">
+                    <div class="skills__box">
+                        <h3 class="skills__subtitle">Développement</h3>
+                        <span class="skills__name">Html</span>
+                        <span class="skills__name">Css</span>
+                        <span class="skills__name">Javascript</span>
+                        <span class="skills__name">BootStrap</span>
+                        <span class="skills__name">PHP</span>
+                        <span class="skills__name">MySQL</span>
+                        <span class="skills__name">JQuery</span>
+                        
+                        <h3 class="skills__subtitle">Design</h3>
+                        <span class="skills__name">Figma</span>
+                        <span class="skills__name">Photoshop</span>
+                    </div>
+
+                    <div class="skills__img">
+                        <img src="assets/img/skill.png" alt="">
+                    </div>
+                </div>
+            </section>
+
+            <!--===== PORTFOLIO =====-->
+            <section class="portfolio section" id="portfolio">
+                <h2 class="section-title">Portfolio</h2>
+
+                <div class="portfolio__container bd-grid">
+                    <div class="portfolio__img">
+                        <img src="assets/img/work1.png" alt="">
+
+                        <div class="portfolio__link"  data-modal="modal1">
+                            <a href="#" class="portfolio__link-name">Voir plus</a>
+                        </div>
+                    </div>
+                    <div class="portfolio__img">
+                        <img src="assets/img/work2.png" alt="">
+
+                        <div class="portfolio__link" data-modal="modal2">
+                            <a href="#" class="portfolio__link-name">Voir plus</a>
+                        </div>
+                    </div>
+                    <div class="portfolio__img">
+                        <img src="assets/img/work3.png" alt="">
+
+                        <div class="portfolio__link" data-modal="modal3">
+                            <a href="#" class="portfolio__link-name">Voir plus</a>
+                        </div>
+                    </div>
+                    <div class="portfolio__img">
+                        <img src="assets/img/work4.png" alt="">
+
+                        <div class="portfolio__link" data-modal="modal4">
+                            <a href="#" class="portfolio__link-name">Voir plus</a>
+                        </div>
+                    </div>
+                    <div class="portfolio__img">
+                        <img src="assets/img/work5.png" alt="">
+
+                        <div class="portfolio__link" data-modal="modal5">
+                            <a href="#" class="portfolio__link-name">Voir plus</a>
+                        </div>
+                    </div>
+                    <div class="portfolio__img">
+                        <img src="assets/img/work6.png" alt="">
+
+                        <div class="portfolio__link" data-modal="modal6">
+                            <a href="#" class="portfolio__link-name">Voir plus</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--===== MODAL =====-->
+              <div id="modal1" class="modal">
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <h2>🌍 Site d'une agence de voyage</h2>
+                  <br>
+                  <p>Projet réalisé en HTML et CSS dans le cadre d’un cours d’initiation aux langages web.
+                    Ce site vitrine présente une agence de voyage fictive avec plusieurs sections : accueil, destinations, services et formulaire de contact.
+                    Ce projet m’a permis de découvrir les bases du HTML sémantique, de structurer une page web, et de styliser les éléments avec CSS.</p>
+                    <br>
+                    <a href="./assets/projet/projet vacances/" class="modal-link">Voir plus</a>
+                </div>
+              </div>
+
+              <div id="modal2" class="modal">
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <h2>🐍 Jeu Snake interactif</h2>
+                  <br>
+                  <p>Projet réalisé en HTML, CSS et JavaScript dans le cadre d’un cours d’initiation à JavaScript.
+                    Ce jeu Snake fonctionnel permet le déplacement fluide du serpent avec un score qui se met à jour automatiquement. J’ai ensuite amélioré l’interface avec du CSS pour le rendre plus agréable visuellement.</p>
+                    <br>
+                    <a href="./assets/projet/projet snake js/" class="modal-link">Voir plus</a>
+                </div>
+              </div>
+
+              <div id="modal3" class="modal">
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <h2>🖼️ Galerie dynamique en jQuery</h2>
+                  <br>
+                  <p>Projet conçu lors d’un cours de découverte de jQuery.
+                    Il s’agit d’une galerie d’images interactive où les images peuvent être affichées, masquées ou filtrées dynamiquement. Ce projet m’a permis d’explorer les fonctionnalités de jQuery pour manipuler le DOM simplement.</p>
+                    <br>
+                    <a href="./assets/projet/projet jquery escalade/" class="modal-link">Voir plus</a>
+                </div>
+              </div>
+
+              <div id="modal4" class="modal">
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <h2>🔐 Générateur de mots de passe</h2>
+                  <br>
+                  <p>Projet personnel réalisé en HTML, CSS et JavaScript.
+                    Ce générateur permet de créer des mots de passe sécurisés aléatoires, avec une fonctionnalité de copie automatique en un clic. Il m’a aidé à renforcer ma compréhension de JavaScript, des événements et de la manipulation du DOM.</p>
+                    <br>
+                    <a href="./assets/projet/projet générateur mdp/" class="modal-link">Voir plus</a>
+                </div>
+              </div>
+
+              <div id="modal5" class="modal">
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <h2>⏱️ Chronomètre fonctionnel avec mode sombre</h2>
+                  <br>
+                  <p>Projet personnel en HTML, CSS et JavaScript, conçu pour pratiquer la gestion du temps et des événements en JS.
+                    Le chronomètre dispose des fonctions start, pause, reset et d’un bouton de bascule entre mode clair et sombre. L’interface a été stylisée pour une meilleure lisibilité et expérience utilisateur.</p>
+                    <br>
+                    <a href="./assets/projet/projet js chrono/" class="modal-link">Voir plus</a>
+                </div>
+              </div>
+
+              <div id="modal6" class="modal">
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <h2>📬 Formulaire de contact avec envoi PHP</h2>
+                  <br>
+                  <p>Projet réalisé lors d’un cours de découverte de PHP.
+                    Il s’agit d’un formulaire de contact complet utilisant HTML, CSS, JavaScript et PHP, capable de valider les champs côté client et envoyer les données par e-mail côté serveur. Ce projet m’a introduit aux bases de la communication front-end / back-end.</p>
+                    <br>
+                    <a href="./assets/projet/projet formulaire de contact/" class="modal-link">Voir plus</a>
+                </div>
+              </div>
+
+            <!--===== CONTACT =====-->
+            <section class="contact section" id="contact">
+                <h2 class="section-title">Contact</h2>
+
+                <div class="contact__container bd-grid">
+                    <div class="contact__info">
+                        <h3 class="contact__subtitle">EMAIL</h3>
+                        <span class="contact__text">baptisterenaud81@gmail.com</span>
+
+                        <h3 class="contact__subtitle">PHONE</h3>
+                        <span class="contact__text">+33 7 85 30 46 55</span>
+
+                        <h3 class="contact__subtitle">ADRESS</h3>
+                        <span class="contact__text">France, Lyon 69003</span>
+                    </div>
+
+                    <form action="contact.php" method="POST" class="contact__form" role="form">
+                        <div class="contact__inputs">
+                            <input type="text" name="name" placeholder="Name" required class="contact__input">
+                            <input type="email" name="email" placeholder="Email" required class="contact__input">
+                        </div>
+                        <textarea name="message" placeholder="Your message" required rows="10" class="contact__input"></textarea>
+                        <input type="submit" value="Send" class="contact__button">
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <!--===== FOOTER =====-->
+        <footer class="footer section">
+            <div class="footer__container bd-grid">
+                <div class="footer__data">
+                    <h2 class="footer__title">BAPTISTE RENAUD</h2>
+                    <p class="footer__text">Je suis Baptiste Renaud et ceci est mon site web personnel</p>
+                </div>
+
+                <div class="footer__data">
+                    <h2 class="footer__title">EXPLORE</h2>
+                    <ul>
+                        <li><a href="#home" class="footer__link">Home</a></li>
+                        <li><a href="#about" class="footer__link">About</a></li>
+                        <li><a href="#skills" class="footer__link">Skills</a></li>
+                        <li><a href="#portfolio" class="footer__link">Portfolio</a></li>
+                        <li><a href="#Contact" class="footer__link">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- <div class="footer__data">
+                    <h2 class="footer__title">FOLLOW</h2>
+                    <a href="#" class="footer__social"><i class='bx bxl-facebook' ></i></a>
+                    <a href="#" class="footer__social"><i class='bx bxl-instagram' ></i></a>
+                    <a href="#" class="footer__social"><i class='bx bxl-twitter' ></i></a>
+                </div> -->
+
+
+            </div>
+        </footer>
+
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
