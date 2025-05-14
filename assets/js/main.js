@@ -98,33 +98,31 @@ document.querySelectorAll('.portfolio__link').forEach(link => {
     }
   });
 
-
+// FORM 
 $(function () {
-    
     $('#contact-form').submit(function(e) {
         e.preventDefault();
-        $('.comments').empty();
-        var postdata = $('#contact-form').serialize();
-        
+
+        var postdata = $(this).serialize();
+
         $.ajax({
             type: 'POST',
-            url: 'php/contact.php',
+            url: './assets/php/contact.php',
             data: postdata,
             dataType: 'json',
             success: function(json) {
-                 
                 if(json.isSuccess) {
-                    $('#contact-form').append("<p class='thank-you'>Votre message a bien été envoyé. Merci de m'avoir contacté :)</p>");
+                    alert("Votre message a bien été envoyé. Merci !");
                     $('#contact-form')[0].reset();
                 } else {
-                    $('#firstname + .comments').html(json.firstnameError);
-                    $('#name + .comments').html(json.nameError);
-                    $('#email + .comments').html(json.emailError);
-                    $('#phone + .comments').html(json.phoneError);
-                    $('#message + .comments').html(json.messageError);
-                }                
+                    if(json.nameError) alert(json.nameError);
+                    if(json.emailError) alert(json.emailError);
+                    if(json.messageError) alert(json.messageError);
+                }
+            },
+            error: function() {
+                alert("Une erreur est survenue. Veuillez réessayer.");
             }
         });
     });
-
-})
+});

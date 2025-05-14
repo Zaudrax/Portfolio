@@ -1,6 +1,7 @@
 <?php
+header('Content-Type: application/json');
 
-$array = array(
+$response = [
     "name" => "",
     "email" => "",
     "message" => "",
@@ -8,56 +9,46 @@ $array = array(
     "emailError" => "",
     "messageError" => "",
     "isSuccess" => false
-);
+];
 
-$emailTo = "contact@johntaieb.com";
+$emailTo = "baptisterenaud81@gmail.com";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $array["name"] = test_input($_POST["name"]);
-    $array["email"] = test_input($_POST["email"]);
-    $array["message"] = test_input($_POST["message"]);
-    $array["isSuccess"] = true;
+    $response["name"] = test_input($_POST["name"] ?? "");
+    $response["email"] = test_input($_POST["email"] ?? "");
+    $response["message"] = test_input($_POST["message"] ?? "");
+    $response["isSuccess"] = true;
     $emailText = "";
 
-    // Vérification du nom
-    if (empty($array["name"])) {
-        $array["nameError"] = "Et oui je veux tout savoir. Même ton nom !";
-        $array["isSuccess"] = false;
+    if (empty($response["name"])) {
+        $response["nameError"] = "Merci d'indiquer votre nom.";
+        $response["isSuccess"] = false;
     } else {
-        $emailText .= "Name: {$array['name']}\n";
+        $emailText .= "Nom: {$response['name']}\n";
     }
 
-    // Vérification de l'email
-    if (!isEmail($array["email"])) {
-        $array["emailError"] = "T'essaies de me rouler ? C'est pas un email ça !";
-        $array["isSuccess"] = false;
+    if (!filter_var($response["email"], FILTER_VALIDATE_EMAIL)) {
+        $response["emailError"] = "Adresse email invalide.";
+        $response["isSuccess"] = false;
     } else {
-        $emailText .= "Email: {$array['email']}\n";
+        $emailText .= "Email: {$response['email']}\n";
     }
 
-    // Vérification du message
-    if (empty($array["message"])) {
-        $array["messageError"] = "Qu'est-ce que tu veux me dire ?";
-        $array["isSuccess"] = false;
+    if (empty($response["message"])) {
+        $response["messageError"] = "Merci d'écrire un message.";
+        $response["isSuccess"] = false;
     } else {
-        $emailText .= "Message: {$array['message']}\n";
+        $emailText .= "Message:\n{$response['message']}\n";
     }
 
-    // Envoi de l'email si tout est bon
-    if ($array["isSuccess"]) {
-        $headers = "From: {$array['name']} <{$array['email']}>\r\nReply-To: {$array['email']}";
-        mail($emailTo, "Un message de votre portfolio", $emailText, $headers);
+    if ($response["isSuccess"]) {
+        $headers = "From: {$response['name']} <{$response['email']}>\r\nReply-To: {$response['email']}";
+        mail($emailTo, "Nouveau message depuis le formulaire de contact de votre Portfolio", $emailText, $headers);
     }
 
-    // Réponse en JSON si le formulaire est envoyé par Ajax
-    header('Content-Type: application/json');
-    echo json_encode($array);
+    echo json_encode($response);
 }
 
-// Fonctions utilitaires
-function isEmail($email) {
-    return filter_var($email, FILTER_VALIDATE_EMAIL);
-}
 function test_input($data) {
     return htmlspecialchars(stripslashes(trim($data)));
 }

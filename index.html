@@ -3,12 +3,14 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="./assets/img/logo.png"/>
 
         <!-- ===== CSS ===== -->
         <link rel="stylesheet" href="assets/css/styles.css">
 
         <!-- ===== BOX ICONS ===== -->
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
         <title>Portfolio responsive complete</title>
     </head>
@@ -50,7 +52,7 @@
                     </div>
 
                     <img src="assets/img/perfil.png" alt="" class="home__img">
-                    <a href="assets/cv-baptiste-renaud.pdf" download class="home__button">Télécharger mon CV</a>
+                    <a href="assets/cv-baptiste-renaud.pdf" download class="home__button"><i class='bx bx-download'></i>CV</a>
                 </div>
             </section>
   </div>          
@@ -65,13 +67,12 @@
 
                     <div>
                         <h2 class="about__subtitle">Je suis Baptiste Renaud</h2>
-                        <span class="about__profession">Développeur web</span>
-                        <p class="about__text">Passionné, créatif et âgé de 22 ans, j’intègre une formation Bac+4 en développement web fullstack. Je suis à la recherche d’une alternance pour rejoindre une équipe dynamique, apprendre en conditions réelles et mettre mes compétences au service de projets concrets.</p>
+                        <span class="about__profession">Développeur web junior</span>
+                        <p class="about__text">Passionné, créatif et âgé de 22 ans, j’intègre une formation Bac+4 en développement web fullstack. Je suis à la recherche d’une alternance sur 2 ans pour rejoindre une équipe dynamique, apprendre en conditions réelles et mettre mes compétences au service de projets concrets.</p>
 
                         <div class="about__social">
                             <a href="https://www.linkedin.com/in/baptiste-renaud-115b3a203/" target="_blank"  class="about__social-icon"><i class='bx bxl-linkedin' ></i></a>
                             <a href="https://github.com/Zaudrax" target="_blank"  class="about__social-icon"><i class='bx bxl-github' ></i></a>
-                            <!-- <a href="#" class="about__social-icon"><i class='bx bxl-dribbble' ></i></a> -->
                         </div>
                     </div>
                 </div>
@@ -218,12 +219,16 @@
               <div id="modal6" class="modal">
                 <div class="modal-content">
                   <span class="close">&times;</span>
-                  <h2>📬 Formulaire de contact avec envoi PHP</h2>
+                  <h2>🍔 FastFood Manager – Site de commande et interface admin</h2>
                   <br>
-                  <p>Projet réalisé lors d’un cours de découverte de PHP.
-                    Il s’agit d’un formulaire de contact complet utilisant HTML, CSS, JavaScript et PHP, capable de valider les champs côté client et envoyer les données par e-mail côté serveur. Ce projet m’a introduit aux bases de la communication front-end / back-end.</p>
+                  <p>FastFood Manager est un site web de commande pour un restaurant de type fast-food. Il permet aux utilisateurs de parcourir un menu dynamique avec photos, descriptions, catégories et prix. Une interface d’administration est intégrée, permettant de gérer facilement les éléments du site (ajout/suppression de plats, mise à jour des prix, des images ou des descriptions).Ce projet a été réalisé dans le cadre d’un cours d’initiation à MySQL et est entièrement codé en HTML, CSS et PHP, avec une base de données MySQL pour la gestion des contenus.</p>
                     <br>
-                    <a href="./assets/projet/projet formulaire de contact/" class="modal-link">Voir plus</a>
+                    <div class="modal-image">
+                        <img src="./assets/img/work6list.png" alt="Aperçu 1">
+                        <img src="./assets/img/work6edit.png" alt="Aperçu 2">
+                        <img src="./assets/img/work6add.png" alt="Aperçu 3">
+                    </div>
+                    <a href="./assets/projet/projet burger menu/" class="modal-link">Voir plus</a>
                 </div>
               </div>
 
@@ -243,12 +248,12 @@
                         <span class="contact__text">France, Lyon 69003</span>
                     </div>
 
-                    <form action="contact.php" method="POST" class="contact__form" role="form">
+                    <form action="./assets/php/contact.php" method="post" class="contact__form" role="form" id="contact-form">
                         <div class="contact__inputs">
-                            <input type="text" name="name" placeholder="Name" required class="contact__input">
-                            <input type="email" name="email" placeholder="Email" required class="contact__input">
+                            <input type="text" name="name" placeholder="Name" required class="contact__input" id="name">
+                            <input type="email" name="email" placeholder="Email" required class="contact__input" id="email">
                         </div>
-                        <textarea name="message" placeholder="Your message" required rows="10" class="contact__input"></textarea>
+                        <textarea name="message" placeholder="Your message" required rows="10" class="contact__input" id="message"></textarea>
                         <input type="submit" value="Send" class="contact__button">
                     </form>
                 </div>
@@ -274,14 +279,13 @@
                     </ul>
                 </div>
                 
-                <!-- <div class="footer__data">
+                <div class="footer__data">
                     <h2 class="footer__title">FOLLOW</h2>
-                    <a href="#" class="footer__social"><i class='bx bxl-facebook' ></i></a>
-                    <a href="#" class="footer__social"><i class='bx bxl-instagram' ></i></a>
-                    <a href="#" class="footer__social"><i class='bx bxl-twitter' ></i></a>
-                </div> -->
-
-
+                    <!-- <a href="#" class="footer__social"><i class='bx bxl-facebook' ></i></a> -->
+                    <a href="https://www.instagram.com/baptiste_rnd0/" class="footer__social"><i class='bx bxl-instagram' ></i></a>
+                    <!-- <a href="#" class="footer__social"><i class='bx bxl-twitter' ></i></a> -->
+                </div>
+                
             </div>
         </footer>
 
